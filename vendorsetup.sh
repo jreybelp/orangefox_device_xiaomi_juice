@@ -81,6 +81,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     	export FOX_ADVANCED_SECURITY=1
     	export OF_USE_TWRP_SAR_DETECT=1
 
+	# run a process after formatting data to work-around MTP issues
+	export OF_RUN_POST_FORMAT_PROCESS=1
+
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
   	   export | grep "OF_" >> $FOX_BUILD_LOG_FILE
