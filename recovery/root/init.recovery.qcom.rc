@@ -54,6 +54,17 @@ service keystore_auth /system/bin/keystore_auth
     disabled
     seclabel u:r:recovery:s0
 
+service unified-script /system/bin/unified-script.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on boot
+    chmod 0777 /system/bin/unified-script.sh
+    start unified-script
+
 service runatboot /system/bin/runatboot.sh
     user root
     group root
