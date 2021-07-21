@@ -1,4 +1,10 @@
 # mount point	fstype	device											device2				flags
+
+/system 	ext4    	/dev/block/mapper/system 			    flags=display="System"
+vendor        	/vendor         ext4    	ro,barrier=1,discard                wait,logical,first_stage_mount
+product       	/product        ext4    	ro,barrier=1,discard                wait,logical,first_stage_mount
+system_ext    	/system_ext     ext4    	ro,barrier=1,discard                wait,logical,first_stage_mount
+
 # Other partitions
 /metadata	ext4	/dev/block/bootdevice/by-name/metadata											flags=display="Metadata";wrappedkey
 /firmware	vfat	/dev/block/bootdevice/by-name/modem										flags=display="Firmware";mounttodecrypt;fsflags="ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0"
