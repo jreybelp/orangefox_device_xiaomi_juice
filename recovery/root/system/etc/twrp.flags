@@ -16,6 +16,7 @@ system_ext    	/system_ext     ext4    	ro,barrier=1,discard                wait
 /boot		emmc	/dev/block/bootdevice/by-name/boot
 /splash		emmc    /dev/block/bootdevice/by-name/splash               flags=display="Boot Logo";backup=1;flashimg=1
 /data		f2fs    /dev/block/bootdevice/by-name/userdata				
+/storage        ext4    /data/media/0														flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 
 # AVB partitions
 /dtbo		emmc	/dev/block/bootdevice/by-name/dtbo										flags=display="DTBO";backup=1;flashimg=1
@@ -42,5 +43,5 @@ system_ext    	/system_ext     ext4    	ro,barrier=1,discard                wait
 /cust_image     emmc    /dev/block/bootdevice/by-name/cust											flags=display="Cust_Image";backup=1;flashimg=1
 
 # Removable storage
-/usb_otg	vfat    /dev/block/sdg1       									/dev/block/sdg		flags=fsflags=utf8;display="USB-OTG";storage;removable
-/external_sd	vfat    /dev/block/mmcblk0p1  									/dev/block/mmcblk0	flags=display="MicroSD";storage;removable
+/usb_otg	vfat    /dev/block/sdg1       									/dev/block/sdg		flags=fsflags=utf8;display="USB-Storage";wipeingui;storage;removable
+/sdcard1	vfat    /dev/block/mmcblk0p1  									/dev/block/mmcblk0	flags=display="MicroSD";wipeingui;storage;removable
