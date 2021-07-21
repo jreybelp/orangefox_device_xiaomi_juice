@@ -61,6 +61,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_GREEN_LED=0
 	export FOX_ENABLE_APP_MANAGER=1
 
+	# to set an old UTC time for the build, to work around bugged alleged anti-rollback protection in some ROMs
+	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1420041600" #[Wed Dec 31 2014 16:00:00 GMT]
+
 	# OTA
 	export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
 	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
