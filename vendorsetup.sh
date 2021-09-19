@@ -60,12 +60,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DELETE_AROMAFM=1
 	export OF_USE_GREEN_LED=0
 	export FOX_ENABLE_APP_MANAGER=1
+	export OF_CHECK_OVERWRITE_ATTEMPTS=1
+	export OF_DONT_KEEP_LOG_HISTORY=1
 
 	# to set an old UTC time for the build, to work around bugged alleged anti-rollback protection in some ROMs
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1420041600" #[Wed Dec 31 2014 16:00:00 GMT]
+	export FOX_REPLACE_BOOTIMAGE_DATE=1
 
 	# OTA
-	export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
+ 	export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
 	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
@@ -79,7 +82,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
         # R11
     	export FOX_R11=2
-	export FOX_VERSION="R11.2"
+	export FOX_VERSION="R11.1_4"
 	export OF_PATCH_AVB20=1
 	export OF_MAINTAINER="Joaquin Guzman"
     	export FOX_ADVANCED_SECURITY=1
