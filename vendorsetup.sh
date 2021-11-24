@@ -72,6 +72,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+	export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
 
 	# screen settings
         export OF_SCREEN_H=2340
@@ -80,8 +81,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_STATUS_INDENT_RIGHT=48
 	#export OF_HIDE_NOTCH=1
 
-        # R11
-    	export FOX_R11=2
 	export FOX_VERSION="R11.1_4"
 	export OF_PATCH_AVB20=1
 	export OF_MAINTAINER="Joaquin Guzman"
