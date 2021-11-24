@@ -79,7 +79,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_STATUS_H=80
         export OF_STATUS_INDENT_LEFT=48
         export OF_STATUS_INDENT_RIGHT=48
-	#export OF_HIDE_NOTCH=1
+	export OF_HIDE_NOTCH=1
 
 	export FOX_VERSION="R11.1_4"
 	export OF_PATCH_AVB20=1
