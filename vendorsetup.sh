@@ -1,4 +1,3 @@
- 
 #
 # Copyright (C) 2020 The Android Open Source Project
 # Copyright (C) 2020 The TWRP Open Source Project
@@ -81,10 +80,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_STATUS_INDENT_RIGHT=48
 	#export OF_HIDE_NOTCH=1
 
-	export FOX_VERSION="R11.1_4"
+	export FOX_VERSION="R11.1_A11"
 	export OF_PATCH_AVB20=1
 	export OF_MAINTAINER="Joaquin Guzman"
-    	export FOX_ADVANCED_SECURITY=1
+    	export FOX_ADVANCED_SECURITY=0
     	export OF_USE_TWRP_SAR_DETECT=1
 
 	# run a process after formatting data to work-around MTP issues
