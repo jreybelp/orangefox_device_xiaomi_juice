@@ -91,6 +91,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# run a process after formatting data to work-around MTP issues
 	export OF_RUN_POST_FORMAT_PROCESS=1
 
+	# work around issues with the binary Android 12 storage.xml
+	export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
 
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
